@@ -481,3 +481,11 @@ body ul, body li {
 .contenedorCards .card .wrapper .infoProd .actions .action.alCarrito svg.inCart {
   transform: scale(0);
 }/*# sourceMappingURL=style.css.map */
+.container-data-bg{
+  width: 80%;
+  border-radius: 8px;
+  background-color: #f4f5f5;
+}
+.figure-tyc img{
+width: 37%;
+}
