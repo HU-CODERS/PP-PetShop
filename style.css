@@ -13,6 +13,10 @@
 .BackG_Color_Grey{
     background-color: #eff1f1 !important;
 }
+a{
+    text-decoration: none;
+}
+
 .Img_Max_Width{
     max-width: 50%;
     margin-left: 20%;
@@ -24,7 +28,19 @@
     width: 6rem;
 }
 
-
+.medioPago{
+    width: 55px;
+    height: 55px;
+    margin: 5px;
+}
+.barraBusqueda{
+    width: 70%;
+}
+.navbarDesplegable{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .Form_Movile_Style{
     box-shadow: 2 2 2 #53a08e;
 }
