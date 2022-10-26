@@ -489,3 +489,8 @@ body ul, body li {
 .figure-tyc img{
 width: 37%;
 }
+.container-compra-bg{
+  width: 100%;
+  background-color: #f4f5f5;
+  border-radius: 8px;
+}
