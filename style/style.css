@@ -31,6 +31,24 @@ label {
   }
 /* END PAGO */
 
+/* START VERIFIED */
+.icon-container {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-verified {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.parrafo {
+  display: flex;
+  justify-content: center;
+}
+
+/* END VERIFIED */
+
 .importantGrey{
   color: grey !important;
 }
