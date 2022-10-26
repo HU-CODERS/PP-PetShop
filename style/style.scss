@@ -116,7 +116,7 @@
           left: 0;
           width: 100%;
           height: 200px;
-          background-color: $primario;
+          // background-color: $primario;
         }
         .imgProd{
           @include imagen('', contain, center bottom);
