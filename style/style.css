@@ -9,19 +9,13 @@
 }
 
 .bannerMedicamentos{
-    background-image: url('../assets/BannerPaginasMindy2.png');
+    background-image: url('/assets/BannerPaginasMindy2.png');
     height: 30vh;
     background-size: cover;
     background-position: center;
 }
 .bannerJuguetes{
-  background-image: url('../assets/BannerPaginasMindy1.png');
-  height: 30vh;
-  background-size: cover;
-  background-position: center;
-}
-.bannerContacto{
-  background-image: url('../assets/BannerPaginasMindy3.png');
+  background-image: url('/assets/BannerPaginasMindy1.png');
   height: 30vh;
   background-size: cover;
   background-position: center;
@@ -502,3 +496,16 @@ body ul, body li {
 .contenedorCards .card .wrapper .infoProd .actions .action.alCarrito svg.inCart {
   transform: scale(0);
 }/*# sourceMappingURL=style.css.map */
+.container-data-bg{
+  width: 80%;
+  border-radius: 8px;
+  background-color: #f4f5f5;
+}
+.figure-tyc img{
+width: 37%;
+}
+.container-compra-bg{
+  width: 100%;
+  background-color: #f4f5f5;
+  border-radius: 8px;
+}

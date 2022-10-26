@@ -46,152 +46,144 @@
 
 <!-- Final del primer navbar -->
 </header>
-    <!-- Checkout Basket -->
-    <div class="container" style="padding-top: 30px; ">
-        <div class="text-center" style="padding-bottom: 40px;">
-            <img class="d-block mx-auto mb-4" src="../assets/PNG512PX2.png" width="10%">
-            <h2>¡Gracias por elegirnos!</h2>
-            <div class="text-line" style="width: 280px;"></div><br>
-            <p class="lead">Por favor complete el siguiente formulario para
-            finalizar su pedido y entregaremos su orden al mail solicitado.
-            Para más información sobre el manejo de paquetes y pedidos por mayor
-            comunicarse con nosotros directamente.</P></p>
+<!-- Checkout Basket -->
+<div class="container" style="padding-top: 30px; ">
+  <div class="text-center" style="padding-bottom: 40px;">
+    <img class="d-block mx-auto mb-4" src="./logoreduced.png" width="10%">
+    <h2>¡Gracias por elegirnos!</h2>
+    <div class="text-line" style="width: 280px;"></div><br>
+    <p class="lead">Por favor complete el siguiente formulario para
+      finalizar su pedido y entregaremos su orden al mail solicitado.
+      Para más información sobre el manejo de paquetes y pedidos por mayor
+      comunicarse con nosotros directamente.</P>
+    </p>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4 col-md-12 float-right">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Orden Final</span>
+        <span class="badge badge-secondary badge-pill total-count"></span>
+      </h4>
+      <ul class="list-group">
+        <li id="tablaLateral" class="list-group-item d-flex bg-light">
+          <button type="button" class="btn btn-block btn-custom-basket fw-bolder" data-toggle="modal"
+            data-target="#basket" style="font-size: 18px;">
+            Detalles de Pedido
+          </button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center tablaLateral2">
+          <p>Subtotal:</p>
+          <p>$ <span class="total-cart"></span></p>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <b>Total:</b>
+          <b>$ <span class="total-final"></span></b>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-lg-8 col-md-12">
+
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Dirección de envio</span>
+      </h4>
+      <form id="form" class="card-custom bg-light border" style="padding: 30px 30px">
+        <div class="row">
+
+          <div class="col-xl-6 col-md-6 col-sm-12 mb-3">
+            <label for="firstName">Nombre:</label>
+            <input type="text" class="form-control" placeholder="Ingrese un nombre..." required>
+          </div>
+
+          <div class="col-xl-6 col-md-6 col-sm-12 mb-3">
+            <label for="lastName">Apellido:</label>
+            <input type="text" class="form-control" placeholder="Ingrese un apellido..." required>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email">Correo Elecrónico:</label>
+          <input type="email" class="form-control" placeholder="Ingrese una dirección de correo..." required>
+        </div>
+
+        <div class="mb-3">
+          <label for="address">Dirección:</label>
+          <input type="text" class="form-control" placeholder="Ingrese una dirección..." required>
         </div>
 
         <div class="row">
-            <div class="col-lg-4 col-md-12 float-right">
-                <h4 class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="text-muted">Orden Final</span>
-                    <span class="badge badge-secondary badge-pill total-count"></span>
-                </h4>
-                <ul class="list-group mb-3">
-                    <li class="list-group-item d-flex bg-light">
-                        <button type="button" class="btn btn-block btn-custom-basket"
-                            data-toggle="modal" data-target="#basket"
-                            style="font-size: 18px;">
-                            Detalles de Pedido
-                        </button>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between">
-                        <p>Subtotal:</p>
-                        <p>$ <span class="total-cart"></span></p>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between">
-                        <b>Total:</b>
-                        <b>$ <span class="total-final"></span></b>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="col-lg-8 col-md-12">
 
-                <h4 class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="text-muted">Dirección de envio</span>
-                </h4>
-                <form class="card-custom bg-light border" style="padding: 30px 30px">
-                    <div class="row">
+          <div class="col-xl-4 col-md-6 col-sm-12 mb-3">
+            <label for="country">País:</label>
+            <select class="custom-select d-block" required>
+              <option>Argentina</option>
+              <option>Mexico</option>
+              <option>Estados Unidos</option>
+            </select>
+          </div>
 
-                        <div class="col-xl-6 col-md-6 col-sm-12 mb-3">
-                            <label for="firstName">Nombre:</label>
-                            <input type="text" class="form-control" 
-                            placeholder="Ingrese un nombre...">
-                        </div>
-
-                        <div class="col-xl-6 col-md-6 col-sm-12 mb-3">
-                            <label for="lastName">Apellido:</label>
-                            <input type="text" class="form-control" 
-                            placeholder="Ingrese un apellido...">
-                        </div>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="email">Correo Elecrónico:</label>
-                        <input type="email" class="form-control" placeholder="Ingrese una dirección de correo...">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="address">Dirección:</label>
-                        <input type="text" class="form-control" 
-                        placeholder="Ingrese una dirección...">
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-xl-4 col-md-6 col-sm-12 mb-3">
-                            <label for="country">País:</label>
-                            <select class="custom-select d-block">
-                                <option>Argentina</option>
-                                <option>Mexico</option>
-                                <option>Estados Unidos</option>
-                            </select>
-                        </div>
-
-                        <div class="col-xl-3 col-md-6 col-sm-12 mb-3">
-                            <label for="state">Provincia:</label>
-                            <input class=" d-block"></input>
-                        </div>
-                    </div>
-                </form>
-
-                <h4 class="d-flex align-items-center mb-3">
-                    <span class="text-muted">Método de Pago</span>
-                </h4>
-
-                <form class="card-custom bg-light border" 
-                style="padding: 20px 30px 30px 30px">
-                    <div>
-                        <div class="custom-control custom-radio" 
-                        style="padding-bottom:10px;">
-                            <input type="radio" class="custom-control-input" id="credito" name="group">
-                            <label class="custom-control-label" for="credito">
-                            Tarjeta de crédito</label>
-                        </div>
-
-                        <div class="custom-control custom-radio"
-                         style="padding-bottom:20px;">
-                            <input type="radio" class="custom-control-input" id="debito" name="group" checked>
-                            <label class="custom-control-label" for="debito">Tarjeta de
-                            débito</label>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xl-6 col-md-6 col-sm-12 mb-3">
-                            <label for="cc-name">Nombre en tarjeta:</label>
-                            <input type="text" class="form-control">
-                            <small class="text-muted">
-                                Nombre completo de persona asociada
-                            </small>
-                        </div>
-                        <div class="col-xl-6 col-md-6 col-sm-12 mb-3">
-                            <label for="cc-number">Número de tarjeta:</label>
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xl-4 col-md-6 col-sm-12 mb-3">
-                            <label>Fecha de Expiración:</label>
-                            <input type="text" class="form-control">
-                            <small class="text-muted">
-                                Fecha antes de renovación
-                            </small>
-                        </div>
-                        <div class="col-xl-3 col-md-6 col-sm-12 mb-3">
-                            <label>CVV:</label>
-                            <input type="text" class="form-control">
-                            <small class="text-muted">
-                                Código de seguridad
-                            </small>
-                        </div>
-                    </div>
-                    <hr class="mb-4">
-                    <button class="btn btn-lg btn-custom-basket btn-block">
-                        Finalizar Compra
-                    </button>
-                </form>
-            </div>
+          <div class="col-xl-3 col-md-6 col-sm-12 mb-3">
+            <label for="state">Provincia:</label>
+            <input class=" d-block" required></input>
+          </div>
         </div>
+      </form>
+
+      <h4 class="d-flex align-items-center mb-3">
+        <span class="text-muted">Método de Pago</span>
+      </h4>
+
+      <form id="form2" class="card-custom bg-light border" style="padding: 20px 30px 30px 30px">
+        <div>
+          <div class="custom-control custom-radio" style="padding-bottom:10px;">
+            <input type="radio" class="custom-control-input" id="credito" name="group" required>
+            <label class="custom-control-label" for="credito">
+              Tarjeta de crédito</label>
+          </div>
+
+          <div class="custom-control custom-radio" style="padding-bottom:20px;">
+            <input type="radio" class="custom-control-input" id="debito" name="group" checked required>
+            <label class="custom-control-label" for="debito">Tarjeta de
+              débito</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-6 col-md-6 col-sm-12 mb-3">
+            <label for="cc-name">Nombre en tarjeta:</label>
+            <input type="text" class="form-control" required>
+            <small class="text-muted">
+              Nombre completo de persona asociada
+            </small>
+          </div>
+          <div class="col-xl-6 col-md-6 col-sm-12 mb-3">
+            <label for="cc-number">Número de tarjeta:</label>
+            <input type="text" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-4 col-md-6 col-sm-12 mb-3">
+            <label>Fecha de Expiración:</label>
+            <input type="text" class="form-control" required>
+            <small class="text-muted">
+              Fecha antes de renovación
+            </small>
+          </div>
+          <div class="col-xl-3 col-md-6 col-sm-12 mb-3">
+            <label>CVV:</label>
+            <input type="text" class="form-control" required>
+            <small class="text-muted">
+              Código de seguridad
+            </small>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <button id="submit" class="btn btn-lg btn-custom-basket btn-block">
+          FINALIZAR COMPRA
+        </button>
+      </form>
     </div>
    <!-- Inicio footer -->
    <footer class="BackG_Color_Grey">
