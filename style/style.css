@@ -103,6 +103,9 @@ a{
 .hover:hover{
   color: rgb(79, 175, 175) !important;
 }
+.colorLetraGeneral{
+  color: rgb(79, 175, 175) !important;
+}
 .dropdown-item:hover{
     color: rgb(140, 213, 213) !important;
 }
