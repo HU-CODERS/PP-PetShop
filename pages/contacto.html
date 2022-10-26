@@ -9,7 +9,7 @@
   <title>Mindy Pet Shop</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="../style/style.css" />
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     <nav class="navbar navbar-light bg-light sticky-top BackG_Color_Grey">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <img src="./logoreduced.png" alt="" width="50" height="50" />
+          <img src="../assets/mindy-logo.png" alt="Mindy-Logo" width="50" height="50" />
         </a>
         <div>
           <form class="d-flex Border_Form_Solid">
@@ -25,7 +25,7 @@
               placeholder="Encontra todo lo que buscas para tu mascota..." aria-label="Search" />
           </form>
         </div>
-        <a href="#"><img class="Img_vender_Style" src="./assets/button.png" alt="button" /></a>
+        <a href="#"><img class="Img_vender_Style" src="https://e7.pngegg.com/pngimages/833/426/png-clipart-shopping-cart-shopping-cart.png" alt="button" /></a>
       </div>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-light bg-light NavBar_2_Style">
@@ -57,7 +57,6 @@
     </nav>
     <div class="banner"></div>
   </header>
-
   <main class="d-grid col-4 mx-auto">
     <h1 class="d-grid mx-auto mt-5">Contacto</h1>
     <div class="container col- d-flex flex-column d-grid mx-auto mt-5"></div>
@@ -106,71 +105,53 @@
     </div>
   </main>
 
-  <footer class="container-fluid mt-5 Footer_Links">
-    <div class="row d-flex justify-content-center">
-      <div class="col-2">
-        <ul>
-          <h4>Redes sociales</h4>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Pinterest</a></li>
-        </ul>
-      </div>
-      <div class="col-2">
-        <ul class="ms-0">
-          <h4>CONTACTANOS</h4>
-          <li><a href="#">WhatsApp</a></li>
-          <li><a href="#">Correo electronico</a></li>
-        </ul>
-      </div>
-      <div class="col-2 d-flex flex-column">
-        <h4>Recibi nuestras novedades:</h4>
-        <div>
-          <form action="https://formspree.io/f/mpznypgj" method="POST">
-
-            <label>
-              <input type="email" placeholder="Ingresa tu mail" name="email" />
-            </label>
-            <button type="submit">Enviar</button>
-          </form>
+  <footer class="BackG_Color_Grey">
+    <div
+      class="container-fluid bg-ligth text-light footer pt-5 mt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-dark mb-4">Redes sociales</h5>
+            <a class="btn btn-link" href="">Instagram</a> <br>
+            <a class="btn btn-link" href="">Facebook</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-dark  mb-4">Contactanos</h5>
+            <a class="btn btn-link" href="">WhatsApp</a> <br>
+            <a class="btn btn-link" href="">Correo electrónico</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-dark mb-4">Ubicación</h5>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13134.792063924104!2d-58.430409999999995!3d-34.611797!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca429815227f%3A0x5d302e497c2cda87!2sR%C3%ADo%20de%20Janeiro%20300%2C%20C1405CCB%20CABA!5e0!3m2!1ses-419!2sar!4v1666744589918!5m2!1ses-419!2sar" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-dark mb-4">Medios de pago</h5>
+            <img class="medioPago" src="../assets/icons/amex@2x.png" alt="">
+            <img class="medioPago" src="../assets/icons/mastercard@2x.png" alt="">
+            <img class="medioPago" src="../assets/icons/mercadopago@2x.png" alt="">
+            <img class="medioPago" src="../assets/icons/mercadopago@2x.png" alt="">
+            <img class="medioPago" src="../assets/icons/visa@2x.png" alt="">
+            <img class="medioPago" src="../assets/icons/banelco@2x.png" alt="">
+          </div>
         </div>
       </div>
-      <div class="col-2">
-        <h4>Ubicación</h4>
-        <div>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.698207206873!2d-58.432598485086366!3d-34.61179216543178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca429815227f%3A0x5d302e497c2cda87!2sR%C3%ADo%20de%20Janeiro%20300%2C%20C1405CCB%20CABA!5e0!3m2!1ses-419!2sar!4v1666724458042!5m2!1ses-419!2sar"></iframe>
+      <div class="d-flex border-top pt-3 ps-3">
+        <div class="col text-dark">
+          <p class="d-inline">Equipo</p>
+          <a href="#">Buonassisa</a>
+          <a href="#">Helu</a>
+          <a href="#">Olmeda</a>
+          <a href="#">Rodriguez</a>
+          <a href="#">Signori</a>
+          <a href="#">Tortoza</a>
         </div>
-      </div>
-      <div class="col-2 d-flex flex-column">
-        <h4>Medios de pago</h4>
-        <div class="d-flex flex-wrap">
-          <img class="img_Medios" src="/assets/icons/amex@2x.png" alt="" />
-          <img class="img_Medios" src="/assets/icons/banelco@2x.png" alt="" />
-          <img class="img_Medios" src="/assets/icons/tarjeta-naranja@2x.png" alt="" />
+        <div class="col">
+          <p class="text-dark">
+            PetShop Mindy 2022-2022 Mindy S.A. Río de Janeiro 300 (Caballito), CABA, Buenos Aires
+          </p>
         </div>
-        <div class="d-flex flex-wrap">
-          <img class="img_Medios" src="/assets/icons/diners@2x.png" alt="" />
-          <img class="img_Medios" src="/assets/icons/mastercard@2x.png" alt="" />
-          <img class="img_Medios" src="/assets/icons/mercadopago@2x.png" alt="" />
-        </div>
-      </div>
-    </div>
-    <div class="row d-flex justify-content-between footer2">
-      <div class="col">
-        <p class="d-inline">Equipo</p>
-        <a href="#">Buonassisa</a>
-        <a href="#">Helu</a>
-        <a href="#">Olmeda</a>
-        <a href="#">Rodriguez</a>
-        <a href="#">Signori</a>
-        <a href="#">Tortoza</a>
-      </div>
-      <div class="col">
-        <p>
-          PetShop Mindy © 2022-2022 Mindy S.A. Río de Janeiro 300 (Caballito),
-          CABA, Buenos Aires
-        </p>
       </div>
     </div>
   </footer>
