@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./assets/PNG512PX2.png" />
-    <title> Mindy - inicio </title>
+    <title> Mindy | inicio </title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,40 +22,29 @@
         <a class="navbar-brand" href="#">
           <img src="./assets/PNG512PX2.png" class="slide-in-blurred-top" alt="" width="80" height="80" />
         </a>
-        <div class="barraBusqueda">
-          <form class="d-flex Border_Form_Solid">
-            <input
-              class="form-control Form_Movile_Style"
-              type="search"
-              placeholder="Encontra todo lo que buscas para tu mascota..."
-              aria-label="Search"
-            />
-          </form>
-        </div>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <button class="navbar-toggler bg-black border border-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+              <div class="navbar-nav navbarDesplegable">
+                <a class="nav-link active1 importantGrey" aria-current="page" href="#">Inicio</a>
+                <a class="nav-link importantGrey" href="./pages/juguetes.html">Juguetes</a>
+                <a class="nav-link importantGrey" href="./pages/medicamentos.html">Medicamentos</a>
+                <a class="nav-link importantGrey" href="#">Contacto</a>
+                <a class="nav-link importantGrey" href="#">Carrito</a>
+              </div>
+            </div>
+          </div>
+        </nav>
         <a href="#"
-          ><img class="Img_vender_Style" src="https://e7.pngegg.com/pngimages/833/426/png-clipart-shopping-cart-shopping-cart.png" alt="button"
+          ><img width="80" height="80" src="./assets/carrito512PNG.png" alt="button"
         /></a>
       </div>
     </nav>
 <!-- Final del primer navbar -->
-<!-- Inicio navbar hamburguesa -->
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <button class="navbar-toggler bg-black border border-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-      <div class="navbar-nav navbarDesplegable">
-        <a class="nav-link active importantGrey" aria-current="page" href="#">Inicio</a>
-        <a class="nav-link importantGrey" href="./pages/juguetes.html">Juguetes</a>
-        <a class="nav-link importantGrey" href="./pages/medicamentos.html">Medicamentos</a>
-        <a class="nav-link importantGrey" href="#">Contacto</a>
-        <a class="nav-link importantGrey" href="#">Carrito</a>
-      </div>
-    </div>
-  </div>
-</nav>
-<!-- Fin navbar hamburguesa -->
+
 <!-- Inicio de carrusel -->
 <div id="carouselExampleControls" class="carousel slide d-flex flex-wrap" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -153,13 +142,15 @@
           <div class="row g-5">
             <div class="col-lg-3 col-md-6">
               <h5 class="text-dark">Redes sociales</h5>
-              <a class="btn btn-link importantGrey" href="">Instagram</a> <br>
-              <a class="btn btn-link importantGrey" href="">Facebook</a>
+              <a target="_blank" class="btn btn-link importantGrey hover" href="https://www.instagram.com/mindy.petshop/">Instagram</a> <br>
+              <a target="_blank" class="btn btn-link importantGrey hover" href="https://www.facebook.com/profile.php?id=100086943352222&is_tour_dismissed=true">Facebook</a> <br>
+              <a target="_blank" class="btn btn-link importantGrey hover" href="https://wa.link/2jmj1t">WhatsApp</a> <br>
+              <a target="_blank" class="btn btn-link importantGrey hover" href="mailto:petshopmindy@gmail.com">Correo electrónico</a>
             </div>
             <div class="col-lg-3 col-md-6">
-              <h5 class="text-dark">Contactanos</h5>
-              <a class="btn btn-link importantGrey" href="">WhatsApp</a> <br>
-              <a class="btn btn-link importantGrey" href="">Correo electrónico</a>
+              <h5 class="text-dark">Preguntas frecuentes</h5>
+              <a target="_blank" class="btn btn-link importantGrey hover" href="">Términos y condiciones</a> <br>
+              <a target="_blank" class="btn btn-link importantGrey hover" href="http://">¿Tenés duda en tu compra?</a>
             </div>
             <div class="col-lg-3 col-md-6">
               <h5 class="text-dark mb-4">Ubicación</h5>
@@ -167,24 +158,24 @@
             </div>
             <div class="col-lg-3 col-md-6">
               <h5 class="text-dark">Medios de pago</h5>
-              <img class="medioPago" src="./assets/icons/amex@2x.png" alt="">
-              <img class="medioPago" src="./assets/icons/mastercard@2x.png" alt="">
-              <img class="medioPago" src="./assets/icons/mercadopago@2x.png" alt="">
-              <img class="medioPago" src="./assets/icons/tarjeta-naranja@2x.png" alt="">
-              <img class="medioPago" src="./assets/icons/visa@2x.png" alt="">
-              <img class="medioPago" src="./assets/icons/banelco@2x.png" alt="">
+              <img class="medioPago" src="./assets/icons/amex@2x.png" alt="Medios de pago">
+              <img class="medioPago" src="./assets/icons/mastercard@2x.png" alt="Medios de pago">
+              <img class="medioPago" src="./assets/icons/mercadopago@2x.png" alt="Medios de pago">
+              <img class="medioPago" src="./assets/icons/tarjeta-naranja@2x.png" alt="Medios de pago">
+              <img class="medioPago" src="./assets/icons/visa@2x.png" alt="Medios de pago">
+              <img class="medioPago" src="./assets/icons/banelco@2x.png" alt="Medios de pago">
             </div>
           </div>
         </div>
         <div class="d-flex border-top pt-3 ps-3">
           <div class="col text-dark">
-            <p class="d-inline">Equipo</p>
-            <a href="#">Buonassisa</a>
-            <a href="#">Helu</a>
-            <a href="#">Olmeda</a>
-            <a href="#">Rodriguez</a>
-            <a href="#">Signori</a>
-            <a href="#">Tortoza</a>
+            <p class="d-inline">Equipo:</p>
+            <a target="_blank" class="hover" href="https://www.linkedin.com/in/bruno-buonassisa-9b8691230/">Buonassisa</a>
+            <a target="_blank" class="hover" href="https://www.linkedin.com/in/pablo-helu-67a040255/">Helu</a>
+            <a target="_blank" class="hover" href="https://www.linkedin.com/in/jonathan-olmeda-158a37180/">Olmeda</a>
+            <a target="_blank" class="hover" href="https://www.linkedin.com/in/mat%C3%ADas-rodr%C3%ADguez-allende/">Rodriguez</a>
+            <a target="_blank" class="hover" href="https://www.linkedin.com/in/chiara-signori-61a57018b/">Signori</a>
+            <a target="_blank" class="hover" href="https://www.linkedin.com/in/antonella-tortoza-771376198">Tortoza</a>
           </div>
           <div class="col">
             <p class="text-dark">

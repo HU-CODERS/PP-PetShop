@@ -9,13 +9,19 @@
 }
 
 .bannerMedicamentos{
-    background-image: url('/assets/BannerPaginasMindy2.png');
+    background-image: url('../assets/BannerPaginasMindy2.png');
     height: 30vh;
     background-size: cover;
     background-position: center;
 }
 .bannerJuguetes{
-  background-image: url('/assets/BannerPaginasMindy1.png');
+  background-image: url('../assets/BannerPaginasMindy1.png');
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+}
+.bannerContacto{
+  background-image: url('../assets/BannerPaginasMindy3.png');
   height: 30vh;
   background-size: cover;
   background-position: center;
@@ -33,18 +39,16 @@ a{
     padding: 2%;
 }
 
-.Img_vender_Style{
-    border-radius: 2rem;
-    width: 6rem;
-}
-
 .medioPago{
-    width: 55px;
+    width: 68px;
     height: 55px;
     margin: 5px;
+    background-size: cover !important;
 }
 .barraBusqueda{
     width: 70%;
+    text-align: center!important;
+    margin-top: 9px;
 }
 .navbarDesplegable{
     display: flex;
@@ -56,6 +60,10 @@ a{
 }
 .Border_Form_Solid{
     border: solid 2px #53a08e;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .Location_Style_div{
     border: solid 2px #53a08e;
@@ -71,9 +79,20 @@ a{
     color: #002f34;
     text-decoration: none;
 }
-
+.active1{
+  color: #002f34 !important;
+  border: solid 2px  #002f34 !important;
+  border-radius: 9px;
+}
 .nav-link:hover{
-    color: rgb(140, 213, 213) !important;
+    color: rgb(79, 175, 175) !important;
+}
+
+.hover{
+  color: grey !important;
+}
+.hover:hover{
+  color: rgb(79, 175, 175) !important;
 }
 .dropdown-item:hover{
     color: rgb(140, 213, 213) !important;
@@ -89,8 +108,10 @@ a{
 
 .H1_Carrousel{
   color: black;
-  border: solid 1px white;
   background-color: rgba(128, 128, 128, 0.295);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* START ANIMACIÓN CAIDA */
 .slide-in-blurred-top {
