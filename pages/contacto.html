@@ -45,30 +45,30 @@
 <!-- Final del primer navbar -->
     <div class="bannerContacto"></div>
   </header>
-  <main class="d-grid col-4 mx-auto">
-    <h1 class="d-grid mx-auto mt-5">Contacto</h1>
-    <div class="container col- d-flex flex-column d-grid mx-auto mt-5"></div>
-    <form action="./show_data.html" method="get">
-      <div class="form-group ">
-        <label for="formControlInput" class="form-label">
+  <main class="d-grid col-8 mx-auto justify-content-center">
+    <h1 class="d-flex mx-auto mt-5">Contacto</h1>
+    <div class="container flex-column d-grid mx-auto mt-5"></div>
+    <form action="" method="get">
+      <div class="form-group">
+        <label for="formControlInput" class="form-label d-flex  justify-content-between">
           Nombre:
           <input type="text" class="form-label input-group-text" id="formControlInput" name="Nombre" />
         </label>
       </div>
       <div class="mb-3 text-color-light">
-        <label>
+        <label class="form-label d-flex  justify-content-between">
           Apellido:
           <input class="form-label input-group-text" type="text" name="Apellido" />
         </label>
       </div>
       <div class="mb-3">
-        <label>
+        <label class="form-label d-flex justify-content-between">
           Email:
           <input class="form-label input-group-text" type="email" name="Email" />
         </label>
       </div>
       <div class="mb-3">
-        <label>
+        <label class="form-label d-flex justify-content-between">
           Nombre de mascota:
           <input class="form-label input-group-text" type="text" name="Nombre de mascota" />
         </label>
@@ -76,19 +76,19 @@
       <div class="mb-3">
         <label>
           Tipo de mascota:
-          <label> <input class="form-check-input" type="radio" name="Mascota" value="Perro" /> Perro </label>
+          <label> <input class="form-check-input" type="radio" name="Mascota" value="Perro" required /> Perro </label>
           <label> <input class="form-check-input" type="radio" name="Mascota" value="Gato" /> Gato </label>
           <label> <input class="form-check-input" type="radio" name="Mascota" value="Ave" /> Ave </label>
           <label> <input class="form-check-input" type="radio" name="Mascota" value="Conejo" /> Conejo </label>
           <label> <input class="form-check-input" type="radio" name="Mascota" value="Reptil" /> Reptil </label>
       </div>
       <div class="mb-3">
-        <label class="col-12">
+        <label class="form-label d-flex justify-content-center">
           <textarea class="form-control" name="Text Data" placeholder="Message"></textarea>
         </label>
       </div>
 
-      <input type="submit" class="btn btn-outline-info d-grid col-6 mx-auto mt-5" value="Enviar" />
+      <input type="submit" class="btn btn-outline-info d-grid mx-auto mt-5" value="Enviar" />
     </form>
     </div>
   </main>
