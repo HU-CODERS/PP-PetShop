@@ -4,6 +4,33 @@
     #eff1f1
 } */
 
+/* START PAGO */
+#tablaLateral {
+  background-color:  #53a08e!important;
+}
+
+#form {
+  background-color: #53a08e !important;
+}
+
+#form2 {
+  background-color: #53a08e !important;
+}
+
+#submit {
+  background-color: #6ccbb5;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+label {
+  font-weight: bolder;
+}
+
+.botonFinal:hover{
+  border: 1px solid black
+  }
+/* END PAGO */
+
 .importantGrey{
   color: grey !important;
 }
