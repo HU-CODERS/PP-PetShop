@@ -9,13 +9,13 @@
 }
 
 .bannerMedicamentos{
-    background-image: url('/assets/BannerPaginasMindy2.png');
+    background-image: url('../assets/BannerPaginasMindy2.png');
     height: 30vh;
     background-size: cover;
     background-position: center;
 }
 .bannerJuguetes{
-  background-image: url('/assets/BannerPaginasMindy1.png');
+  background-image: url('../assets/BannerPaginasMindy1.png');
   height: 30vh;
   background-size: cover;
   background-position: center;
