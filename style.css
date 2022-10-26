@@ -107,3 +107,38 @@ iframe{
     max-width: 3rem;
     max-height: 3rem;
 }
+
+#active {
+    border: 2px solid #53a08e;
+    border-radius: 5px;
+}
+
+#nav {
+    background-color: #014a53 !important;
+    color: #ebeeef !important;
+}
+
+#tablaLateral {
+    background-color:  #53a08e!important;
+}
+
+/* .tablaLateral2 {
+    background-color: #6ccbb5 !important;
+} */
+
+#form {
+    background-color: #53a08e !important;
+}
+
+#form2 {
+    background-color: #53a08e !important;
+}
+
+#submit {
+    background-color: #6ccbb5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+label {
+    font-weight: bolder;
+}
