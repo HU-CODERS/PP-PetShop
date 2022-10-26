@@ -107,3 +107,12 @@ iframe{
     max-width: 3rem;
     max-height: 3rem;
 }
+
+.lista-desordenada li{
+    list-style-type: disc;
+}
+
+.container-img-compra img{
+    width: 70%;
+}
+
