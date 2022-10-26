@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="" />
+  <title>Mindy Pet Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-light bg-light sticky-top BackG_Color_Grey">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./logoreduced.png" alt="" width="50" height="50" />
+        </a>
+        <div>
+          <form class="d-flex Border_Form_Solid">
+            <input class="form-control Form_Movile_Style" type="search"
+              placeholder="Encontra todo lo que buscas para tu mascota..." aria-label="Search" />
+          </form>
+        </div>
+        <a href="#"><img class="Img_vender_Style" src="./assets/button.png" alt="button" /></a>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light NavBar_2_Style">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Juguetes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Medicamentos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">BotonCarrito</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="banner"></div>
+  </header>
+
+  <main class="d-grid col-4 mx-auto">
+    <h1 class="d-grid mx-auto mt-5">Contacto</h1>
+    <div class="container col- d-flex flex-column d-grid mx-auto mt-5"></div>
+    <form action="./show_data.html" method="get">
+      <div class="form-group ">
+        <label for="formControlInput" class="form-label">
+          Nombre:
+          <input type="text" class="form-label input-group-text" id="formControlInput" name="Nombre" />
+        </label>
+      </div>
+      <div class="mb-3 text-color-light">
+        <label>
+          Apellido:
+          <input class="form-label input-group-text" type="text" name="Apellido" />
+        </label>
+      </div>
+      <div class="mb-3">
+        <label>
+          Email:
+          <input class="form-label input-group-text" type="email" name="Email" />
+        </label>
+      </div>
+      <div class="mb-3">
+        <label>
+          Nombre de mascota:
+          <input class="form-label input-group-text" type="text" name="Nombre de mascota" />
+        </label>
+      </div>
+      <div class="mb-3">
+        <label>
+          Tipo de mascota:
+          <label> <input class="form-check-input" type="radio" name="Mascota" value="Perro" /> Perro </label>
+          <label> <input class="form-check-input" type="radio" name="Mascota" value="Gato" /> Gato </label>
+          <label> <input class="form-check-input" type="radio" name="Mascota" value="Ave" /> Ave </label>
+          <label> <input class="form-check-input" type="radio" name="Mascota" value="Conejo" /> Conejo </label>
+          <label> <input class="form-check-input" type="radio" name="Mascota" value="Reptil" /> Reptil </label>
+      </div>
+      <div class="mb-3">
+        <label class="col-12">
+          <textarea class="form-control" name="Text Data" placeholder="Message"></textarea>
+        </label>
+      </div>
+
+      <input type="submit" class="btn btn-outline-info d-grid col-6 mx-auto mt-5" value="Enviar" />
+    </form>
+    </div>
+  </main>
+
+  <footer class="container-fluid mt-5 Footer_Links">
+    <div class="row d-flex justify-content-center">
+      <div class="col-2">
+        <ul>
+          <h4>Redes sociales</h4>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+        </ul>
+      </div>
+      <div class="col-2">
+        <ul class="ms-0">
+          <h4>CONTACTANOS</h4>
+          <li><a href="#">WhatsApp</a></li>
+          <li><a href="#">Correo electronico</a></li>
+        </ul>
+      </div>
+      <div class="col-2 d-flex flex-column">
+        <h4>Recibi nuestras novedades:</h4>
+        <div>
+          <form action="https://formspree.io/f/mpznypgj" method="POST">
+
+            <label>
+              <input type="email" placeholder="Ingresa tu mail" name="email" />
+            </label>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-2">
+        <h4>Ubicación</h4>
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.698207206873!2d-58.432598485086366!3d-34.61179216543178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca429815227f%3A0x5d302e497c2cda87!2sR%C3%ADo%20de%20Janeiro%20300%2C%20C1405CCB%20CABA!5e0!3m2!1ses-419!2sar!4v1666724458042!5m2!1ses-419!2sar"></iframe>
+        </div>
+      </div>
+      <div class="col-2 d-flex flex-column">
+        <h4>Medios de pago</h4>
+        <div class="d-flex flex-wrap">
+          <img class="img_Medios" src="/assets/icons/amex@2x.png" alt="" />
+          <img class="img_Medios" src="/assets/icons/banelco@2x.png" alt="" />
+          <img class="img_Medios" src="/assets/icons/tarjeta-naranja@2x.png" alt="" />
+        </div>
+        <div class="d-flex flex-wrap">
+          <img class="img_Medios" src="/assets/icons/diners@2x.png" alt="" />
+          <img class="img_Medios" src="/assets/icons/mastercard@2x.png" alt="" />
+          <img class="img_Medios" src="/assets/icons/mercadopago@2x.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-between footer2">
+      <div class="col">
+        <p class="d-inline">Equipo</p>
+        <a href="#">Buonassisa</a>
+        <a href="#">Helu</a>
+        <a href="#">Olmeda</a>
+        <a href="#">Rodriguez</a>
+        <a href="#">Signori</a>
+        <a href="#">Tortoza</a>
+      </div>
+      <div class="col">
+        <p>
+          PetShop Mindy © 2022-2022 Mindy S.A. Río de Janeiro 300 (Caballito),
+          CABA, Buenos Aires
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
