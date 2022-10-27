@@ -92,7 +92,7 @@
     <div class="barraBusqueda">
       <form class="d-flex flex-wrap">
         <input
-          id="inputSearch"
+          id="js-searchText"
           class="mt-2 ms-5 form-control Form_Movile_Style"
           type="search"
           aria-label="Search"
@@ -100,8 +100,8 @@
         />
       </form>
     </div>
-    <div class="ps-5 pt-3 d-flex gap-3 flex-wrap">
-      <label class="d-inline-flex p-1" for="">
+    <div class="ps-5 pt-3 d-flex gap-3 flex-wrap" id="js-contenedorCheckboxes">
+      <!-- <label class="d-inline-flex p-1" for="">
         <input class="me-2" type="checkbox" id="" value="" />240-330
       </label>
       <label class="d-inline-flex p-1" for="">
@@ -115,15 +115,15 @@
       </label>
       <label class="d-inline-flex p-1" for="">
         <input class="me-2" type="checkbox" id="" value="" />940-1300
-      </label>
-    </div>
+      </label>-->
+    </div> 
   </div>
   <!-- Fin filtros -->
 
     <!-- Section cards -->
 
-    <div class="contenedorCards">
-      <div class="card">
+    <div class="contenedorCards" id="js-contenedorCardsMed">
+      <!-- <div class="card">
         <div class="wrapper">
           <div class="colorProd"></div>
           <div
@@ -335,7 +335,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <!--Section Card-->
@@ -400,5 +400,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="../scripts/medicamentos.js"></script>
   </body>
 </html>
