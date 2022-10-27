@@ -1,0 +1,109 @@
+/* .NavBar_2_Style{
+    display: flex;
+    justify-content: center !important;
+
+    #eff1f1
+} */
+
+.banner{
+    background-image: url('./hero-bg-ar.jpg');
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
+}
+.BackG_Color_Grey{
+    background-color: #eff1f1 !important;
+}
+.Img_Max_Width{
+    max-width: 50%;
+    margin-left: 20%;
+    padding: 2%;
+}
+
+.Img_vender_Style{
+    border-radius: 2rem;
+    width: 6rem;
+}
+
+
+.Form_Movile_Style{
+    width: 43rem;
+    box-shadow: 2 2 2 #53a08e;
+}
+.Border_Form_Solid{
+    border: solid 2px #53a08e;
+}
+.Location_Style_div{
+    border: solid 2px #53a08e;
+}
+.link-success{
+    color: #53a08e;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: underline 2px;
+}
+
+.link-success:hover{
+    color: #002f34;
+    text-decoration: none;
+}
+
+.nav-link:hover{
+    color: rgb(140, 213, 213) !important;
+}
+.dropdown-item:hover{
+    color: rgb(140, 213, 213) !important;
+}
+
+.Form_Border_None{
+    border: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+li{
+    list-style: none;
+    list-style-position: outside;
+}
+
+.P_Style{
+    margin-left: 3rem;
+}
+
+.Footer_Links{
+    background-color: #ebeeef;
+}
+
+.Footer_Links h4{
+    margin-top: 1rem;
+    font-size: 15px;
+    color: #53a08e;
+    font-weight: bold;
+}
+.Footer_Links a{
+    color: grey;
+    font-size: .8rem;
+}
+
+.footer2{
+    background-color: #53a08e;
+    color: white;
+}
+.footer2 a{
+    text-decoration: none;
+    color: white;
+}
+
+iframe{
+    max-width: 200px;
+    max-height: 100px;
+} 
+
+.img_Medios{
+    margin: 0.5rem;
+    max-width: 3rem;
+    max-height: 3rem;
+}
