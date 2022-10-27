@@ -4,6 +4,24 @@
     #eff1f1
 } */
 
+/* modal  */
+.modal-content{
+  width: 100% !important;
+}
+
+/* INICIO TABLA PAGO */
+.tabla-estilo{
+  width: 100% !important;
+}
+.modal_Estilo{
+  height: 100% !important;
+}
+/* FIN TABLA PAGO */
+
+/* modal  */
+
+
+
 /* START PAGO */
 #tablaLateral {
   background-color:  #53a08e!important;
