@@ -30,7 +30,11 @@ label {
   border: 1px solid black
   }
 /* END PAGO */
-
+/* START LABEL */
+.text-label{
+  font-weight: 600;
+}
+/* END LABEL */
 /* START VERIFIED */
 .icon-container {
   display: flex;
