@@ -15,6 +15,47 @@
     <link rel="stylesheet" href="../style/style.css" />
   </head>
 
+  <!-- Modal -->
+<div class="modal modal_Estilo" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">🐶Mindy Petshop🐶 - Orden de Compra</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <table class="tabla-estilo">
+            <tbody>
+            <tr>
+              <td><a class="delete-item">x</a></td>
+              <td>🐶Producto🐶</td>
+              <td><p class='d-none d-lg-inline'>P/U: $2</p></td>
+              <td><div class='input-group'><button class='minus-item btn btn-light' style='font-size:14px; border-color: #B7BCBB;'>-</button>
+              <input type='text' class='item-count form-control' style='box-shadow:none; text-align:center; font-size:14px;'readonly>
+              <button class='plus-item btn btn-light' style='border-color: #B7BCBB; font-size:14px;'>+</button></div></td>
+              <td><p class='float-right'>= $total</p></td>
+            </tr>
+          </table>
+        </tbody>
+        <div class="float-right">
+          <b>
+              Total: $20</span>
+          </b>
+      </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <a class="btn btn-primary" href="./juguetes.html">Continuar pago</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal -->   
+
+
   <body>
     <header>
       <!-- Inicio del  navbar -->
@@ -69,6 +110,7 @@
             ><img
               width="80"
               height="80"
+              type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
               src="../assets/carrito512PNG.png"
               alt="button"
           /></a>
@@ -76,7 +118,6 @@
       </nav>
 <!-- Final del navbar -->
     </header>
-<!-- Inicio del banner/carrusel -->
  <!-- Inicio del banner/carrusel -->
  <div id="carouselExampleControls" class="carousel slide d-flex flex-wrap" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -86,7 +127,6 @@
   </div>
 </div>
  <!-- Fin del banner/carrusel --> 
-<!-- Fin del banner/carrusel -->
   <!-- Inicio filtros -->
   <div class="d-flex justify-content-center flex-wrap">
     <div class="barraBusqueda">
@@ -101,21 +141,6 @@
       </form>
     </div>
     <div class="ps-5 pt-3 d-flex gap-3 flex-wrap" id="js-contenedorCheckboxes">
-      <!-- <label class="d-inline-flex p-1" for="">
-        <input class="me-2" type="checkbox" id="" value="" />240-330
-      </label>
-      <label class="d-inline-flex p-1" for="">
-        <input class="me-2" type="checkbox" id="" value="" />330-450
-      </label>
-      <label class="d-inline-flex p-1" for="">
-        <input class="me-2" type="checkbox" id="" value="" />450-610
-      </label>
-      <label class="d-inline-flex p-1" for="">
-        <input class="me-2" type="checkbox" id="" value="" />610-940
-      </label>
-      <label class="d-inline-flex p-1" for="">
-        <input class="me-2" type="checkbox" id="" value="" />940-1300
-      </label>-->
     </div> 
   </div>
   <!-- Fin filtros -->
@@ -123,223 +148,9 @@
     <!-- Section cards -->
 
     <div class="contenedorCards" id="js-contenedorCardsMed">
-      <!-- <div class="card">
-        <div class="wrapper">
-          <div class="colorProd"></div>
-          <div
-            class="imgProd"
-            style="
-              background-image: url(https://firebasestorage.googleapis.com/v0/b/fotos-3cba1.appspot.com/o/batman.png?alt=media&token=bcce964a-7224-4e47-b619-265e93b5311e);
-            "
-          ></div>
-          <div class="infoProd">
-            <p class="nombreProd">
-              ARTFX DC UNIVERSE Batman HUSH Renewal Package
-            </p>
-            <p class="extraInfo">Fecha de salida: 31/03/2021</p>
-            <div class="actions">
-              <div class="preciosGrupo">
-                <p class="precio precioOferta">9,999</p>
-                <p class="precio precioProd">9,999</p>
-              </div>
-              <div class="icono action aFavs">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                  <path
-                    d="M47 5c-6.5 0-12.9 4.2-15 10-2.1-5.8-8.5-10-15-10A15 15 0 0 0 2 20c0 13 11 26 30 39 19-13 30-26 30-39A15 15 0 0 0 47 5z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="icono action alCarrito">
-                <svg
-                  class="inCart"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 64 64"
-                >
-                  <title>Quitar del carrito</title>
-                  <path d="M30 22H12M2 6h6l10 40h32l3.2-9.7"></path>
-                  <circle cx="20" cy="54" r="4"></circle>
-                  <circle cx="46" cy="54" r="4"></circle>
-                  <circle cx="46" cy="22" r="16"></circle>
-                  <path d="M53 18l-8 9-5-5"></path>
-                </svg>
-                <svg
-                  class="outCart"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 64 64"
-                >
-                  <title>Agregar al carrito</title>
-                  <path d="M2 6h10l10 40h32l8-24H16"></path>
-                  <circle cx="23" cy="54" r="4"></circle>
-                  <circle cx="49" cy="54" r="4"></circle>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="wrapper">
-          <div class="colorProd" style="background-color: #1d1d1d"></div>
-          <div
-            class="imgProd"
-            style="
-              background-image: url(https://firebasestorage.googleapis.com/v0/b/fotos-3cba1.appspot.com/o/blackpanter.png?alt=media&token=de5d3491-e31f-4d91-aa3d-1eb15827d954);
-            "
-          ></div>
-          <div class="infoProd">
-            <p class="nombreProd">Mafex No.091 MAFEX BLACK PANTHER</p>
-            <p class="extraInfo">Fecha de salida: 31/03/2021</p>
-            <div class="actions">
-              <div class="preciosGrupo">
-                <p class="precio precioProd">2,799</p>
-              </div>
-              <div class="bakuretsu_icono action aFavs">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                  <path
-                    d="M47 5c-6.5 0-12.9 4.2-15 10-2.1-5.8-8.5-10-15-10A15 15 0 0 0 2 20c0 13 11 26 30 39 19-13 30-26 30-39A15 15 0 0 0 47 5z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="bakuretsu_icono action alCarrito">
-                <svg
-                  class="inCart"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 64 64"
-                >
-                  <title>Quitar del carrito</title>
-                  <path d="M30 22H12M2 6h6l10 40h32l3.2-9.7"></path>
-                  <circle cx="20" cy="54" r="4"></circle>
-                  <circle cx="46" cy="54" r="4"></circle>
-                  <circle cx="46" cy="22" r="16"></circle>
-                  <path d="M53 18l-8 9-5-5"></path>
-                </svg>
-                <svg
-                  class="outCart"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 64 64"
-                >
-                  <title>Agregar al carrito</title>
-                  <path d="M2 6h10l10 40h32l8-24H16"></path>
-                  <circle cx="23" cy="54" r="4"></circle>
-                  <circle cx="49" cy="54" r="4"></circle>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="wrapper">
-          <div class="colorProd" style="background-color: #153a82"></div>
-          <div
-            class="imgProd"
-            style="
-              background-image: url(https://firebasestorage.googleapis.com/v0/b/fotos-3cba1.appspot.com/o/arthur.png?alt=media&token=7e0f09e6-1369-42c5-9c98-af99946fae72);
-            "
-          ></div>
-          <div class="infoProd">
-            <p class="nombreProd">
-              Nendoroid Fate/Grand Order: Saber/Arthur Pendragon Ascension
-            </p>
-            <p class="extraInfo">Fecha de salida: 31/03/2021</p>
-            <div class="actions">
-              <div class="preciosGrupo">
-                <p class="precio precioOferta">1,999</p>
-                <p class="precio precioProd">9,999</p>
-              </div>
-              <div class="bakuretsu_icono action aFavs">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                  <path
-                    d="M47 5c-6.5 0-12.9 4.2-15 10-2.1-5.8-8.5-10-15-10A15 15 0 0 0 2 20c0 13 11 26 30 39 19-13 30-26 30-39A15 15 0 0 0 47 5z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="bakuretsu_icono action alCarrito">
-                <svg
-                  class="inCart"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 64 64"
-                >
-                  <title>Quitar del carrito</title>
-                  <path d="M30 22H12M2 6h6l10 40h32l3.2-9.7"></path>
-                  <circle cx="20" cy="54" r="4"></circle>
-                  <circle cx="46" cy="54" r="4"></circle>
-                  <circle cx="46" cy="22" r="16"></circle>
-                  <path d="M53 18l-8 9-5-5"></path>
-                </svg>
-                <svg
-                  class="outCart"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 64 64"
-                >
-                  <title>Agregar al carrito</title>
-                  <path d="M2 6h10l10 40h32l8-24H16"></path>
-                  <circle cx="23" cy="54" r="4"></circle>
-                  <circle cx="49" cy="54" r="4"></circle>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="wrapper">
-          <div class="colorProd" style="background-color: #3f4a69"></div>
-          <div
-            class="imgProd"
-            style="
-              background-image: url(https://firebasestorage.googleapis.com/v0/b/fotos-3cba1.appspot.com/o/kashima.png?alt=media&token=ffed0174-7dbe-4b61-bd42-05608a3a3090);
-            "
-          ></div>
-          <div class="infoProd">
-            <p class="nombreProd">
-              figma Kantai Collection -Kan Colle- Kashima
-            </p>
-            <p class="extraInfo">Fecha de salida: 31/03/2021</p>
-            <div class="actions">
-              <div class="preciosGrupo">
-                <p class="precio precioOferta">2,799</p>
-                <p class="precio precioProd">9,999</p>
-              </div>
-              <div class="bakuretsu_icono action aFavs">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                  <path
-                    d="M47 5c-6.5 0-12.9 4.2-15 10-2.1-5.8-8.5-10-15-10A15 15 0 0 0 2 20c0 13 11 26 30 39 19-13 30-26 30-39A15 15 0 0 0 47 5z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="bakuretsu_icono action alCarrito">
-                <svg
-                  class="inCart"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 64 64"
-                >
-                  <title>Quitar del carrito</title>
-                  <path d="M30 22H12M2 6h6l10 40h32l3.2-9.7"></path>
-                  <circle cx="20" cy="54" r="4"></circle>
-                  <circle cx="46" cy="54" r="4"></circle>
-                  <circle cx="46" cy="22" r="16"></circle>
-                  <path d="M53 18l-8 9-5-5"></path>
-                </svg>
-                <svg
-                  class="outCart"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 64 64"
-                >
-                  <title>Agregar al carrito</title>
-                  <path d="M2 6h10l10 40h32l8-24H16"></path>
-                  <circle cx="23" cy="54" r="4"></circle>
-                  <circle cx="49" cy="54" r="4"></circle>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
     </div>
 
     <!--Section Card-->
-  <!-- Footer Start -->
    <!-- Inicio footer -->
    <footer class="BackG_Color_Grey">
     <div
@@ -395,6 +206,7 @@
     </div>
   </footer>
 <!-- Final footer -->
+<script src="../scripts/tienda.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
