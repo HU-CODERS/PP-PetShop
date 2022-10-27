@@ -4,10 +4,7 @@
     #eff1f1
 } */
 
-/* modal  */
-.modal-content{
-  width: 100% !important;
-}
+
 
 /* INICIO TABLA PAGO */
 .tabla-estilo{
@@ -20,6 +17,9 @@
 
 /* modal  */
 
+.verified-main{
+  min-height: 52vh;
+}
 
 
 /* START PAGO */
