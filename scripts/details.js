@@ -25,19 +25,21 @@ function createCardDetails(event) {
   let div = document.createElement("div");
   div.className = "row g-0";
   div.innerHTML = `
-                     <div class="col-md-5">
-                      <img
-                        src="${event.imagen}"
-                        class="img-fluid rounded-start"
-                        style="height: 100%; object-fit: cover; width: 100%"
-                        alt="${event.descripcion}"
-                      />
-                    </div>
-                    <div class="col-md-7 card-body">
-                        <h5 class="card-title">${event.nombre}</h5>
-                        <p>Date: ${event.precio}</p>
-
-                    </div>`
+  <article class="card cardDetails" style="width: 30rem">
+  <img
+    src="${event.imagen}"
+    class="card-img-top"
+    alt="${event.nombre}"
+    height="70%"
+  />
+  <h5 class="card-title text-center">${event.nombre}</h5>
+  <p class="card-text text-center">${event.descripcion}</p>
+  <div class="d-flex justify-content-evenly">
+    <p>Precio: US$ ${event.precio}</p>
+    <a href="../pages/juguetes.html" class="btn btn-success">Regresar</a>
+  </div>
+  
+</article>`
                             ;
   container18.appendChild(div);
 }
