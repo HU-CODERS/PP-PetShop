@@ -8,7 +8,9 @@ async function getData() {
     let medicamentos = dataShop.filter((e) => e.tipo === "Medicamento");
     console.log(medicamentos);
     createCards(medicamentos);
-
+    let pocasUnidades = medicamentos.filter(cadaMedicamento => cadaMedicamento.stock <= 3)
+    console.log(pocasUnidades);
+    pocasUnidades.map(e=> e.pocasUnidades=" últimas unidades")
     let menorRango = medicamentos.filter(
       (cadaMedicamento) => cadaMedicamento.precio <= 360
     );
@@ -113,6 +115,7 @@ function createCards(data) {
           <div class="colorProd"></div>
           <div class="imgProd"> <img src="${medicamento.imagen}" class="imgcard card-img-top"  alt:"${medicamento.nombre}"/></div>
           <div class="infoProd">
+          <h6 class="ultimas-unidades">${medicamento.pocasUnidades || " "}  </h6>
             <p class="nombreProd">${medicamento.nombre}
             </p>
             <p class="hideItem">.</p>

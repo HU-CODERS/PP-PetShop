@@ -6,6 +6,10 @@ async function getData() {
     let dataShop = data.response;
     let juguetes = dataShop.filter((e) => e.tipo === "Juguete");
     createCards(juguetes);
+    let pocasUnidades = juguetes.filter(cadaJuguete => cadaJuguete.stock <= 3)
+    console.log(pocasUnidades);
+    pocasUnidades.map(e=> e.pocasUnidades=" últimas unidades")
+    console.log(juguetes);
     let menorRango = juguetes.filter((cadaJuguete) => cadaJuguete.precio <= 360);
     menorRango.map((e) => (e.rango = "$0-$360"));
     let medianoRango = juguetes.filter(
@@ -98,6 +102,7 @@ function createCards(data) {
         <div class="colorProd"></div>
         <div class="imgProd"> <img src="${juguete.imagen}" class="imgcard card-img-top"  alt:"${juguete.nombre}"/></div>
         <div class="infoProd">
+        <h6 class="ultimas-unidades">${juguete.pocasUnidades || " "}  </h6>
           <p class="nombreProd">${juguete.nombre}
           </p>
           <p class="hideItem">.</p>
