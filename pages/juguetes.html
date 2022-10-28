@@ -12,54 +12,28 @@
   <link rel="stylesheet" href="../style/style.css" />
 </head>
   <!-- Modal -->
-  <div class="modal modal_Estilo" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-      <div class="modal-content ">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">🐶Mindy Petshop🐶 - Orden de Compra</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-         <div>
-     <table class="tabla-estilo">
-       <tbody id=>
-         <tr>
-           <td><a class="delete-item">x</a></td>
-           <td>🐶Producto🐶</td>
-           <td>
-             <p class='d-none d-lg-inline'>P/U: $2</p>
-           </td>
-           <td>
-             <div class='input-group'><button class='minus-item btn btn-light'
-                 style='font-size:14px; border-color: #B7BCBB;'>-</button>
-               <input type='text' class='item-count form-control'
-                 style='box-shadow:none; text-align:center; font-size:14px;' readonly>
-               <button class='plus-item btn btn-light' style='border-color: #B7BCBB; font-size:14px;'>+</button>
-             </div>
-           </td>
-           <td>
-             <p class='float-right'>= $total</p>
-           </td>
-         </tr>
-        </tbody>
-      </table>
-      <div class="float-right">
-        <b>
-        <span> Total: $20</span>
-        </b>
+<div class="modal modal_Estilo" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">🐶Mindy Petshop🐶 - Orden de Compra</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-   </div>
+      <div class="modal-body">
+        <div id="tablaModal">
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <a class="btn btn-primary" href="./juguetes.html">Continuar pago</a>
+        <div id="totalCarrito" class="float-right">
+          
         </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <a class="btn btn-primary" href="./juguetes.html">Continuar pago</a>
       </div>
     </div>
   </div>
-
-  <!-- modal -->
+</div>
+<!-- modal -->
 <body>
 
   <header>
@@ -87,6 +61,7 @@
             </div>
           </div>
         </nav>
+        <a href="#"><img width="80" height="80" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"  src="../assets/carrito512PNG.png" alt="button" /></a>
       </div>
     </nav>
     <!-- Fin del navbar -->
@@ -344,6 +319,7 @@
       crossorigin="anonymous"
       
     ></script>
+    <script src="../scripts/checkout.js"></script>
     <script src="../scripts/modalJug.js"></script>
     <script src="../scripts/juguetes.js"></script>
   </body>

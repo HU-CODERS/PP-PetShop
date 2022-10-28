@@ -61,7 +61,9 @@ async function getData() {
 
 
 getData();
-let carritoCompras = []
+let carritoComprasLS = localStorage.getItem('carritoCompras');
+let carritoCompras = carritoComprasLS === null ? [] : JSON.parse(localStorage.getItem('carritoCompras'))
+
 let containerCheckBoxes = document.getElementById("js-container-check");
 function createCheckBoxes(array) {
   checkContainer = "";
@@ -169,6 +171,7 @@ function testing(nombre, id){
     $btn.className="btn-secondary"
     localStorage.setItem('carritoCompras', JSON.stringify(carritoCompras))
   }
+  location.reload() 
 }
 
 function filterModal(juguetes){
