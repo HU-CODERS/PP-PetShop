@@ -573,3 +573,14 @@ width: 37%;
   background-color: #f4f5f5;
   border-radius: 8px;
 }
+
+.ultimas-unidades{
+  position: absolute;
+  margin-bottom: 740px;
+  margin-right: 157px;
+  background-color: red;
+  color: white;
+ display: flex;
+align-items: center;
+  height: 30px;
+}
