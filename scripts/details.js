@@ -23,7 +23,7 @@ getDatos();
 
 function createCardDetails(event) {
   let div = document.createElement("div");
-  div.className = "row g-0";
+  div.className = "row g-0 shadow";
   div.innerHTML = `
   <article class="card cardDetails" style="width: 30rem">
   <img
@@ -32,11 +32,11 @@ function createCardDetails(event) {
     alt="${event.nombre}"
     height="70%"
   />
-  <h5 class="card-title text-center">${event.nombre}</h5>
-  <p class="card-text text-center">${event.descripcion}</p>
-  <div class="d-flex flex-column align-items-center justify-content-evenly">
-    <p>Precio: US$ ${event.precio}</p>
-    <a href="../pages/juguetes.html" class="btn btn-success">Regresar</a>
+  <h5 class="card-title text-center pb-2">${event.nombre}</h5>
+  <p class="card-text text-center pb-2">${event.descripcion}</p>
+  <div class="d-flex flex-column align-items-center justify-content-evenly pb-2">
+    <p class="pb-2">Precio: US$ ${event.precio}</p>
+    <a href="../pages/juguetes.html" class="btn btn-success pb-2">Regresar</a>
   </div>
   
 </article>`
