@@ -115,7 +115,7 @@ function createCards(data) {
           <div class="infoProd">
             <p class="nombreProd">${medicamento.nombre}
             </p>
-            <p class="extraInfo">${medicamento.descripcion}</p>
+            <p class="hideItem">.</p>
             <a href="./details.html?id=${medicamento._id}">Ver más</a>
             <div class="actions">
               <div class="preciosGrupo">
@@ -156,7 +156,7 @@ function createCards(data) {
   } else {
     contenedorCardsMed.innerHTML = ` 
       <div class=container-message><img src="${"https://cdn.boletius.com/images/v3/search.png"}" class="img-message"  alt:"${"Event not found"}"/>
-      <p id="message"> Event not found, adjust search filter! </p>
+      <p id="message"> No se encontró ningun resultado. Ajustá la busqueda por favor.</p>
       </div>`;
   }
 }
