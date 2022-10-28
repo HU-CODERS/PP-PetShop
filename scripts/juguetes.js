@@ -1,37 +1,29 @@
+ let $order = document.getElementById("orderContainer")
 async function getData() {
   try {
     let res = await fetch("https://apipetshop.herokuapp.com/api/articulos");
     let data = await res.json();
-    console.log(data);
     let dataShop = data.response;
-    console.log(dataShop);
     let juguetes = dataShop.filter((e) => e.tipo === "Juguete");
-    console.log(juguetes);
     createCards(juguetes);
-
     let menorRango = juguetes.filter((cadaJuguete) => cadaJuguete.precio <= 360);
-    console.log(menorRango);
     menorRango.map((e) => (e.rango = "$0-$360"));
     let medianoRango = juguetes.filter(
       (cadaJuguete) => cadaJuguete.precio >= 360 && cadaJuguete.precio <= 800
     );
+    
     medianoRango.map((e) => (e.rango = "$360-$800"));
-    console.log(medianoRango);
     let altoRango = juguetes.filter(
       (cadaJuguete) => cadaJuguete.precio >= 800 && cadaJuguete.precio <= 1500
     );
     altoRango.map((cadaJuguete) => (cadaJuguete.rango = "$800-$1500"));
-    console.log(altoRango);
-
     let arrayJuguetesConRangos = menorRango
       .concat(medianoRango)
       .concat(altoRango);
-    console.log(arrayJuguetesConRangos);
     let arrayRangos = arrayJuguetesConRangos.map((e) => e.rango);
-    console.log(arrayRangos);
     let arrayRangosFiltrados = [...new Set(arrayRangos)];
-
-    console.log(arrayRangosFiltrados);
+    // testing2($order, filterModal(juguetes))
+  
 
     // createCheckBoxes(juguetes)
     createCheckBoxes(arrayRangosFiltrados);
@@ -43,9 +35,9 @@ async function getData() {
         console.log(checked);
         if (checked) {
           checksSelected.push(event.target.value);
-          console.log(checksSelected);
+
           filtradoCombinadoCyS(arrayJuguetesConRangos);
-          console.log(checksSelected);
+
         } else {
           checksSelected = checksSelected.filter(
             (uncheck) => uncheck !== event.target.value
@@ -67,7 +59,11 @@ async function getData() {
   }
 }
 
+
 getData();
+let carritoComprasLS = localStorage.getItem('carritoCompras');
+let carritoCompras = carritoComprasLS === null ? [] : JSON.parse(localStorage.getItem('carritoCompras'))
+
 let containerCheckBoxes = document.getElementById("js-container-check");
 function createCheckBoxes(array) {
   checkContainer = "";
@@ -104,7 +100,8 @@ function createCards(data) {
         <div class="infoProd">
           <p class="nombreProd">${juguete.nombre}
           </p>
-          <p class="extraInfo">${juguete.descripcion}</p>
+          <p class="hideItem">.</p>
+          <a href="./details.html?id=${juguete._id}">Ver más</a>
           <div class="actions">
             <div class="preciosGrupo">
               <p class="precio precioProd">${juguete.precio}</p>
@@ -117,20 +114,7 @@ function createCards(data) {
               </svg>
             </div>
             <div class="icono action alCarrito">
-              <svg class="inCart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                <title>Quitar del carrito</title>
-                <path d="M30 22H12M2 6h6l10 40h32l3.2-9.7"></path>
-                <circle cx="20" cy="54" r="4"></circle>
-                <circle cx="46" cy="54" r="4"></circle>
-                <circle cx="46" cy="22" r="16"></circle>
-                <path d="M53 18l-8 9-5-5"></path>
-              </svg>
-              <svg class="outCart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                <title>Agregar al carrito</title>
-                <path d="M2 6h10l10 40h32l8-24H16"></path>
-                <circle cx="23" cy="54" r="4"></circle>
-                <circle cx="49" cy="54" r="4"></circle>
-              </svg>
+              <button class="btn btn-secondary" id="btn-${juguete.nombre}" onclick="testing('${juguete.nombre}', 'btn-${juguete.nombre}')">Agregar</button>
             </div>
           </div>
         </div>
@@ -141,7 +125,7 @@ function createCards(data) {
   } else {
     container18.innerHTML = ` 
     <div class=container-message><img src="${"https://cdn.boletius.com/images/v3/search.png"}" class="img-message"  alt:"${"Event not found"}"/>
-    <p id="message"> Event not found, adjust search filter! </p>
+    <p id="message"> No se encontró ningun resultado. Ajustá la busqueda por favor.</p>
     </div>`;
   }
 }
@@ -175,3 +159,26 @@ function filtradoCombinadoCyS(array) {
   }
   createCards(datos);
 }
+function testing(nombre, id){
+  let $btn = document.getElementById(id)
+  if(!carritoCompras.includes(nombre)){
+    carritoCompras.push(nombre)
+    console.log(carritoCompras)
+    $btn.className="btn-success"
+    localStorage.setItem('carritoCompras', JSON.stringify(carritoCompras))
+  }else{
+    carritoCompras = carritoCompras.filter(carrito => carrito !== nombre)
+    console.log(carritoCompras)
+    $btn.className="btn-secondary"
+    localStorage.setItem('carritoCompras', JSON.stringify(carritoCompras))
+  }
+  location.reload() 
+}
+
+function filterModal(juguetes){
+  let carritoActual = JSON.parse(localStorage.getItem('carritoCompras'))
+
+let filtro = juguetes.filter(e=> e.nombre == carritoActual[0])
+return filtro
+}
+

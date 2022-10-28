@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Mindy </title>
+  <title>Mindy | Pagos</title>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,12 +12,38 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
   <link rel="stylesheet" href="../style/style.css" />
 </head>
+<!-- Modal -->
+<div class="modal modal_Estilo" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">🐶Mindy Petshop🐶 - Orden de Compra</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="tablaModal">
+        </div>
+        <div id="totalCarrito" class="float-right">
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <a class="btn btn-primary" href="./juguetes.html">Continuar pago</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal -->
+<body>
+  
+
 <header>
   <!-- Inicio del primer navbar -->
   <nav class="navbar navbar-light bg-light sticky-top BackG_Color_Grey">
     <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="../assets/PNG512PX2.png" class="slide-in-blurred-top" alt="Logo Mindy" width="80" height="80" />
+      <a class="navbar-brand" href="../index.html">
+        <img class="hidden" src="../assets/PNG512PX2.png" class="slide-in-blurred-top" alt="Logo Mindy" width="80" height="80" />
       </a>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -37,7 +63,7 @@
           </div>
         </div>
       </nav>
-      <a href="#"><img width="80" height="80" src="../assets/carrito512PNG.png" alt="button" /></a>
+      <a href="#"><img width="80" height="80" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"  src="../assets/carrito512PNG.png" alt="button" /></a>
     </div>
   </nav>
 
@@ -63,28 +89,27 @@
           <span class="text-muted">Orden Final</span>
           <span class="badge badge-secondary badge-pill total-count"></span>
         </h4>
-        <ul class="list-group">
+         <ul class="list-group " id="orderContainer">
           <li id="tablaLateral" class="list-group-item d-flex bg-light">
-            <button type="button" class="btn btn-block btn-custom-basket fw-bolder" data-toggle="modal"
+             <div  class="btn-custom-basket fw-bolder" id="open"
               data-target="#basket" style="font-size: 18px;">
               Detalles de Pedido
-            </button>
-          </li>
+            </div> </li>
+      
+
+          </ul>
+          <ul>
           <li class="list-group-item d-flex justify-content-between align-items-center tablaLateral2">
-            <p>Subtotal:</p>
-            <p>$ <span class="total-cart"></span></p>
+            <p>Total:</p>
+            <p>$ <span class="total-cart" id="total-cart"></span></p>
           </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <b>Total:</b>
-            <b>$ <span class="total-final"></span></b>
-          </li>
-        </ul>
+          </ul>
       </div>
 
       <div class="col-lg-8 col-md-12">
 
         <h4 class="d-flex justify-content-between align-items-center mb-3">
-          <span class="text-muted">Dirección de envio</span>
+          <span class="text-muted">Dirección de envío</span>
         </h4>
         <form id="form" class="card-custom bg-light border" style="padding: 30px 30px">
           <div class="row">
@@ -170,7 +195,7 @@
           </div>
           <hr class="mb-4">
           <button id="submit" class="btn btn-lg btn-custom-basket btn-block botonFinal">
-            FINALIZAR COMPRA
+           <a href="./verified.html" target="_parent">FINALIZAR COMPRA</a>
           </button>
         </form>
       </div>
@@ -229,7 +254,7 @@
       </div>
       <div class="col">
         <p class="text-dark">
-          Mindy 2022 S.R.L Río de Janeiro 300 (Caballito), CABA, Buenos Aires
+          PetShop Mindy 2022-2022 Mindy S.A. Río de Janeiro 300 (Caballito), CABA, Buenos Aires
         </p>
       </div>
     </div>
@@ -238,6 +263,7 @@
 <!-- Final footer -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="../scripts/checkout.js"></script>
 </body>
 
 </html>
