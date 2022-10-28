@@ -72,6 +72,13 @@ async function getData() {
 }
 
 getData();
+
+// se obtiene desde LS el array de string
+let carritoComprasLS = localStorage.getItem('carritoCompras');
+
+// compara, si carritoComprasLS es null, genera un nuevo carritocompras, sino carga elvalor de LocalStorage
+let carritoCompras = carritoComprasLS === null ? [] : JSON.parse(localStorage.getItem('carritoCompras'))
+
 let contenedorCheckboxes = document.getElementById("js-contenedorCheckboxes");
 function createCheckBoxes(array) {
   checkContainer = "";
@@ -135,6 +142,9 @@ function createCards(data) {
                   <circle cx="23" cy="54" r="4"></circle>
                   <circle cx="49" cy="54" r="4"></circle>
                 </svg>
+                <div class="icono action alCarrito">
+                  <button class="btn btn-secondary" id="btn-${medicamento.nombre}" onclick="testing('${medicamento.nombre}', 'btn-${medicamento.nombre}')">Agregar</button>
+                </div>
               </div>
             </div>
           </div>
@@ -183,3 +193,20 @@ function filtradoCombinadoCyS(array) {
   }
   createCards(datos);
 }
+
+function testing(nombre, id){
+  let $btn = document.getElementById(id)
+  if(!carritoCompras.includes(nombre)){
+    carritoCompras.push(nombre)
+    console.log(carritoCompras)
+    $btn.className="btn-success"
+    localStorage.setItem('carritoCompras', JSON.stringify(carritoCompras))
+  }else{
+    carritoCompras = carritoCompras.filter(carrito => carrito !== nombre)
+    console.log(carritoCompras)
+    $btn.className="btn-secondary"
+    localStorage.setItem('carritoCompras', JSON.stringify(carritoCompras))
+  }
+  location.reload() 
+}
+
