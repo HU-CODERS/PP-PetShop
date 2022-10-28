@@ -181,6 +181,7 @@ return filtro
 
 
 
+
 // function testing2(contenedor, array){
 //   array.forEach( e=>{
 //  contenedor.innerHTML+=
