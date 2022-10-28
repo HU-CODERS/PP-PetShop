@@ -34,7 +34,7 @@ function createCardDetails(event) {
   />
   <h5 class="card-title text-center">${event.nombre}</h5>
   <p class="card-text text-center">${event.descripcion}</p>
-  <div class="d-flex justify-content-evenly">
+  <div class="d-flex flex-column align-items-center justify-content-evenly">
     <p>Precio: US$ ${event.precio}</p>
     <a href="../pages/juguetes.html" class="btn btn-success">Regresar</a>
   </div>
