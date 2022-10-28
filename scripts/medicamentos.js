@@ -116,6 +116,7 @@ function createCards(data) {
             <p class="nombreProd">${medicamento.nombre}
             </p>
             <p class="extraInfo">${medicamento.descripcion}</p>
+            <a href="./details.html?id=${medicamento._id}">Ver más</a>
             <div class="actions">
               <div class="preciosGrupo">
                 <p class="precio precioProd">${medicamento.precio}</p>
