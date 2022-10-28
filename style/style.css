@@ -4,7 +4,10 @@
     #eff1f1
 } */
 
-
+input[type="search"]::-webkit-search-cancel-button {
+  /* Remove default */
+  -webkit-appearance: none;
+}
 
 /* INICIO TABLA PAGO */
 .tabla-estilo{
