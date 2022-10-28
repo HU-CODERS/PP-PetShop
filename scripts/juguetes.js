@@ -101,6 +101,7 @@ function createCards(data) {
           <p class="nombreProd">${juguete.nombre}
           </p>
           <p class="extraInfo">${juguete.descripcion}</p>
+          <a href="./details.html?id=${juguete._id}">Ver más</a>
           <div class="actions">
             <div class="preciosGrupo">
               <p class="precio precioProd">${juguete.precio}</p>
@@ -180,64 +181,4 @@ function filterModal(juguetes){
 let filtro = juguetes.filter(e=> e.nombre == carritoActual[0])
 return filtro
 }
-
-
-
-
-
-// function testing2(contenedor, array){
-//   array.forEach( e=>{
-//  contenedor.innerHTML+=
-//   `
-//   <table>
-//   <tbody id=>
-//     <tr>
-//       <td rowspan='3'><a >Borrar Todo</a></td>
-//       <td>🐶Producto🐶</td>
-//       <td>
-//         <p >P/U: $2</p>
-//       </td>
-//       <td>
-//        <tr>${e.nombre}</tr>
-//       </td>
-//       <td>
-//         <p>$total</p>
-//      </td>
-//     </tr>
-//    </tbody>
-//  </table>
-//   `
-//   })}
-
-// function insertModal(data){
-// data.forEach(e=> {
-//   $modal.innerHTML+=`
-//   <table class="tabla-estilo">
-//   <tbody id=>
-//     <tr>
-//       <td><a class="delete-item">x</a></td>
-//       <td>🐶Producto🐶</td>
-//       <td>
-//         <p class='d-none d-lg-inline'>P/U: $2</p>
-//       </td>
-//       <td>
-//         <div class='input-group'><button class='minus-item btn btn-light'
-//             style='font-size:14px; border-color: #B7BCBB;'>-</button>
-//           <input type='text' class='item-count form-control'
-//             style='box-shadow:none; text-align:center; font-size:14px;' readonly>
-//           <button class='plus-item btn btn-light' style='border-color: #B7BCBB; font-size:14px;'>+</button>
-//         </div>
-//       </td>
-//       <td>
-//         <p class='float-right'>= $total</p>
-//       </td>
-//     </tr>
-//    </tbody>
-//  </table>
-//  <div class="float-right">
-//    <b>
-//    <span> Total: $20</span>
-//    </b>
-//  </div>
-//   `
 
